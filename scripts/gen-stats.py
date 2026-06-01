@@ -116,7 +116,7 @@ def human(n: int) -> str:
 
 def build_svg(stats: dict, theme_name: str) -> str:
     t = THEMES[theme_name]
-    W, H = 860, 150
+    W, H = 860, 162
     pad, gap = 28, 16
     tiles = [
         ("🗓️", f"{stats['years']}+", "years on GitHub"),
@@ -152,9 +152,10 @@ def build_svg(stats: dict, theme_name: str) -> str:
         out.append(f'  <rect x="{x:.1f}" y="{pad}" width="{tw:.1f}" height="{th}" '
                    f'rx="12" fill="{t["tile"]}" stroke="{t["stroke"]}" stroke-width="1"/>')
         out.append(f'  <rect x="{x:.1f}" y="{pad}" width="4" height="{th}" rx="2" fill="{accent}"/>')
-        out.append(f'  <text class="emoji" x="{cx:.1f}" y="{pad+34}">{emoji}</text>')
-        out.append(f'  <text class="num" x="{cx:.1f}" y="{pad+72}">{num}</text>')
-        out.append(f'  <text class="lab" x="{cx:.1f}" y="{pad+96}">{lab}</text>')
+        # three rows vertically centered within the tile, with even breathing room
+        out.append(f'  <text class="emoji" x="{cx:.1f}" y="{pad+36}">{emoji}</text>')
+        out.append(f'  <text class="num" x="{cx:.1f}" y="{pad+74}">{num}</text>')
+        out.append(f'  <text class="lab" x="{cx:.1f}" y="{pad+98}">{lab}</text>')
         out.append('</g>')
     out.append("</svg>")
     return "\n".join(out)

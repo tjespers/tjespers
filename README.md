@@ -38,13 +38,15 @@
 
 ## 👋 Hey, I'm Tim
 
-I'm a **platform engineer** with ~10 years in production, now designing systems that run on **AI** — agents, context engineering, and Spec-Driven Development. Based in the Netherlands, I've spent that decade helping build **[Shiftbase](https://www.shiftbase.com)** into one of Europe's leading workforce-management platforms — trusted by **8,000+ businesses** scheduling **250,000+ employees every day.**
+I'm a **platform engineer** with about ten years in production, now spending most of my time on systems that run on **AI**. Based in the Netherlands. For most of that decade I've helped grow **[Shiftbase](https://www.shiftbase.com)** into one of Europe's leading workforce-management platforms, today used by **8,000+ businesses** to schedule **250,000+ employees** a day.
 
-I joined as the first employee and grew with it, wearing most of the hats an engineering org needs along the way — **backend developer, system architect, team lead, platform engineer, and even security officer.** I helped **design and scale both the application & platform architecture**, architected the **Google Cloud** foundation it runs on, and moved the team onto **Kubernetes, GitOps and Infrastructure-as-Code** — all whilst keeping the whole thing secure and compliant as it grew across European markets.
+I was the first engineer, so over the years I've worn most of the hats: **backend, architecture, team lead, platform**, and for a stretch the **ISO security officer** role too. I designed the **Google Cloud** foundation the product runs on and moved the team onto **Kubernetes, GitOps and infrastructure-as-code**. Keeping all of that secure and compliant while it scaled across European markets came with the territory.
 
-Lately I've been aiming that same systems thinking at **AI**: context engineering, agentic workflows, skill design & **Spec-Driven Development**. The tools are new, the discipline isn't. Specs, guardrails and feedback loops are what turn a clever demo into something you can actually put in front of users. Most AI demos break in production; I build the ones that don't.
+These days that same instinct points at **AI**. The tools are new; the discipline isn't. I build agentic workflows, do genuine context and skill engineering, and run **Spec-Driven Development** on real production work rather than throwaway demos.
+<!-- TODO: swap in a concrete anecdote here — a specific agent/skill system you shipped: what it does, what broke, how you fixed it. One real detail does more than any amount of polish. -->
+What turns a slick demo into something you'd hand to real users is mostly the unglamorous part: clear specs, sane guardrails, and feedback loops that actually close.
 
-> **Visionary, but grounded** — I'll chase the big idea, then ship the boring version that survives Monday morning.
+> **Visionary, but grounded.** I'll chase the big idea, then ship the boring version that survives Monday morning.
 
 ---
 
@@ -54,28 +56,28 @@ Lately I've been aiming that same systems thinking at **AI**: context engineerin
 <tr>
 <td width="50%" valign="top">
 
-### 🧱 Platforms are products
-Internal tooling, golden paths and pipelines deserve the same care as anything customer-facing — they decide how fast everyone else can move.
+### 🧱 Treat the platform like a product
+Internal tooling and pipelines decide how fast everyone else can ship. I give them the same care as anything a customer sees, because they're what the whole team builds on.
 
 </td>
 <td width="50%" valign="top">
 
-### 🤫 Boring infrastructure is a feature
-The best platform work is invisible: things deploy, scale, and recover without anyone having to think about it.
+### 🤫 The best infra is boring
+You shouldn't have to think about it. Things deploy, scale, and recover quietly, and the on-call phone stays quiet too.
 
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 
-### 🤝 Architecture is a team sport
-Ten years in one codebase taught me the durable wins are decisions a whole team can understand, own, and build on after I've moved on.
+### 🤝 Good architecture outlives me
+Ten years in one codebase taught me the wins that last are the ones a whole team can understand and own long after I've moved on.
 
 </td>
 <td width="50%" valign="top">
 
-### 🤖 AI changes the altitude, not the discipline
-Agents and context engineering are powerful — but they still need specs, guardrails, and someone who's shipped real systems before.
+### 🤖 AI raises the altitude, not the bar
+Agents are powerful, but they still need specs, guardrails, and someone who's shipped real systems before. The engineering doesn't get easier. It just gets more interesting.
 
 </td>
 </tr>
