@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="150" viewBox="0 0 860 150" role="img" aria-label="GitHub stats">
+<defs><style>text{font-family:'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif;}.num{font-weight:800;font-size:32px;fill:#1f2328;text-anchor:middle;}.lab{font-weight:600;font-size:13px;fill:#59636e;text-anchor:middle;}.emoji{font-size:18px;text-anchor:middle;}.tile{animation:rise .5s ease both;}.t0{animation-delay:0.05s}.t1{animation-delay:0.13s}.t2{animation-delay:0.21s}.t3{animation-delay:0.29s}@keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}</style></defs>
+<rect width="860" height="150" rx="16" fill="#ffffff"/>
+<g class="tile t0">
+  <rect x="28.0" y="28" width="189.0" height="94" rx="12" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1"/>
+  <rect x="28.0" y="28" width="4" height="94" rx="2" fill="#7aa2f7"/>
+  <text class="emoji" x="122.5" y="62">🗓️</text>
+  <text class="num" x="122.5" y="100">11+</text>
+  <text class="lab" x="122.5" y="124">years on GitHub</text>
+</g>
+<g class="tile t1">
+  <rect x="233.0" y="28" width="189.0" height="94" rx="12" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1"/>
+  <rect x="233.0" y="28" width="4" height="94" rx="2" fill="#bb9af7"/>
+  <text class="emoji" x="327.5" y="62">⚡</text>
+  <text class="num" x="327.5" y="100">10k</text>
+  <text class="lab" x="327.5" y="124">contributions</text>
+</g>
+<g class="tile t2">
+  <rect x="438.0" y="28" width="189.0" height="94" rx="12" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1"/>
+  <rect x="438.0" y="28" width="4" height="94" rx="2" fill="#9ece6a"/>
+  <text class="emoji" x="532.5" y="62">📈</text>
+  <text class="num" x="532.5" y="100">625</text>
+  <text class="lab" x="532.5" y="124">this year</text>
+</g>
+<g class="tile t3">
+  <rect x="643.0" y="28" width="189.0" height="94" rx="12" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1"/>
+  <rect x="643.0" y="28" width="4" height="94" rx="2" fill="#e0af68"/>
+  <text class="emoji" x="737.5" y="62">🔥</text>
+  <text class="num" x="737.5" y="100">21</text>
+  <text class="lab" x="737.5" y="124">longest streak</text>
+</g>
+</svg>

@@ -1,0 +1,11 @@
+# Python build artifacts
+__pycache__/
+*.pyc
+
+# Local Claude Code settings
+.claude/
+
+# Scratch / working docs (kept local, not published)
+README.pdf
+MERMAID-OPTIONS.md
+STACK-STYLING-OPTIONS.md

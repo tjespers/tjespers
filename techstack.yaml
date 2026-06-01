@@ -1,0 +1,89 @@
+# ─────────────────────────────────────────────────────────────
+#  techstack.yaml — the ONLY file you edit to change your stack card.
+#  After editing, run:   python3 scripts/gen-stack.py
+#  It regenerates assets/stack-dark.svg and assets/stack-light.svg.
+#
+#  Each item:  { label: "Shown text", icon: "simpleicons-slug" }
+#    • label  — the text on the pill (required)
+#    • icon   — a Simple Icons slug (optional). Find slugs at https://simpleicons.org
+#               (e.g. "googlecloud", "kubernetes", "go", "redis"). Omit for no icon.
+#    • color  — override the icon color, e.g. "#ffffff" (optional; default = brand color)
+#
+#  Pills wrap automatically to fit the card width, so a domain can hold many.
+# ─────────────────────────────────────────────────────────────
+
+theme:
+  width: 860          # overall card width in px
+  icon_color: brand   # brand | white | accent  (how to color the icons)
+  pill_color: brand   # brand | accent  (brand = each pill uses its own brand color;
+                      #                   accent = all pills in a domain share the accent)
+  max_per_row: 5      # cap pills per line (also still wraps if they'd overflow width)
+
+domains:
+  - name: "Cloud & Platform Engineering"
+    emoji: "☁️"
+    accent: "#7aa2f7"   # blue
+    items:
+      - { label: "Google Cloud", icon: "googlecloud" }
+      - { label: "Kubernetes",   icon: "kubernetes" }
+      - { label: "Docker",       icon: "docker" }
+      - { label: "Terraform",    icon: "terraform" }
+      - { label: "Helm",         icon: "helm" }
+      
+  - name: "GitOps & Delivery"
+    emoji: "🔄"
+    accent: "#7dcfff"   # cyan
+    items:
+      - { label: "GitHub Actions", icon: "githubactions" }
+      - { label: "Dependabot", icon: "dependabot" }
+      # - { label: "GitLab CI",      icon: "gitlab" }
+      - { label: "FluxCD",         icon: "flux" }
+      - { label: "Git",            icon: "git" }
+
+  - name: "Observability & SRE"
+    emoji: "📈"
+    accent: "#f7768e"   # red
+    items:
+      - { label: "Grafana",      icon: "grafana" }
+      - { label: "Prometheus",   icon: "prometheus" }
+      - { label: "Loki",         color: "#f5a623" }   # no Simple Icon — text pill, amber (Grafana Loki)
+      - { label: "Sentry",       icon: "sentry" }
+      - { label: "Opsgenie",     icon: "opsgenie" }
+
+  - name: "Backend & API Development"
+    emoji: "🛠️"
+    accent: "#9ece6a"   # green
+    items:
+      - { label: "PHP",       icon: "php" }
+      - { label: "Laravel",   icon: "laravel" }
+      # - { label: "Python",    icon: "python" }
+      - { label: "Go",        icon: "go" }
+      - { label: "Bash",      icon: "gnubash" }
+
+  - name: "Data & Databases"
+    emoji: "🗄️"
+    accent: "#e0af68"   # amber
+    items:
+      - { label: "MySQL",      icon: "mysql" }
+      - { label: "BigQuery",   icon: "googlebigquery" }
+      - { label: "Redis",      icon: "redis" }
+      # - { label: "PostgreSQL", icon: "postgresql" }
+
+  - name: "AI & Context Engineering"
+    emoji: "🤖"
+    accent: "#bb9af7"   # purple
+    items:
+      - { label: "Claude", icon: "claude" }
+      - { label: "Gemini", icon: "googlegemini" }
+      - { label: "NotebookLM", icon: "notebooklm" }
+      - { label: "MCP",    icon: "modelcontextprotocol" }
+      - { label: "SDD",    icon: "readme" }
+
+  - name: "Security & Compliance"
+    emoji: "🔐"
+    accent: "#e07b53"   # warm orange
+    items:
+      - { label: "ISO 27001", color: "#e07b53" }   # no Simple Icon — text pill
+      - { label: "Trivy",     icon: "trivy" }
+      # - { label: "Vault",     icon: "vault" }
+      # - { label: "Falco",     icon: "falco" }
