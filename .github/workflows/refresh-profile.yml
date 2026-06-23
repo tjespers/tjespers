@@ -1,0 +1,73 @@
+name: Refresh profile visuals
+
+# Regenerates every generated artifact (tech-stack card, stats card, contribution
+# snake) and publishes them to the dedicated `assets` branch. The `main` branch
+# stays source-only — CI never commits to it, so there's no self-trigger loop and
+# no bot noise in your history. The README references the cards via
+# raw.githubusercontent.com/<user>/<repo>/assets/<file>.
+
+on:
+  schedule:
+    - cron: "0 */12 * * *"   # every 12 hours
+  workflow_dispatch:          # manual run from the Actions tab
+  push:
+    branches: [main]          # rebuild when source (techstack.yaml, scripts) changes
+
+permissions:
+  contents: write
+
+# Only one refresh at a time; a newer run supersedes an in-flight one.
+concurrency:
+  group: refresh-profile
+  cancel-in-progress: true
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout source (main)
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: pip install --quiet pyyaml
+
+      # ── Build the two custom SVG cards into ./dist ─────────────────────────
+      - name: Generate tech-stack card
+        run: python3 scripts/gen-stack.py
+
+      - name: Generate stats card
+        # STATS_TOKEN (PAT with read:user/repo) gives full counts incl. private
+        # contributions; falls back to the default token (public-only) if unset.
+        env:
+          GITHUB_TOKEN: ${{ secrets.STATS_TOKEN || secrets.GITHUB_TOKEN }}
+        run: python3 scripts/gen-stats.py
+
+      - name: Collect card SVGs into dist/
+        run: |
+          mkdir -p dist
+          cp assets/stack-dark.svg  assets/stack-light.svg  dist/
+          cp assets/stats-dark.svg  assets/stats-light.svg  dist/
+
+      # ── Build the contribution snake into the same ./dist ──────────────────
+      - name: Generate contribution snake
+        uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+
+      # ── Publish everything to the `assets` branch (replaces its contents) ──
+      - name: Publish to the assets branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: assets
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

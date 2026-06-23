@@ -1,0 +1,15 @@
+# Generated artifacts — built by scripts/ and published to the `assets` branch
+# by CI. Kept out of `main` so it stays source-only (README, scripts, config).
+assets/
+
+# Python build artifacts
+__pycache__/
+*.pyc
+
+# Local Claude Code settings
+.claude/
+
+# Scratch / working docs (kept local, not published)
+README.pdf
+MERMAID-OPTIONS.md
+STACK-STYLING-OPTIONS.md
